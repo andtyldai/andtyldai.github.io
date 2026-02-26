@@ -4,7 +4,7 @@
   box-sizing: border-box;
   text-decoration: none;
   color: #fff;
-  font-family: Open Sans;
+  font-family: "Open Sans";
   text-shadow: 1px 1px 0px black;
 }
 body {
@@ -186,3 +186,4 @@ button:hover {
 .photo_credit p:hover {
   color: #ccc;
 }
+
