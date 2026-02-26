@@ -1,10 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
   color: #fff;
-  font-family: "Open Sans";
+  font-family: Open Sans;
   text-shadow: 1px 1px 0px black;
 }
 body {
@@ -186,4 +188,3 @@ button:hover {
 .photo_credit p:hover {
   color: #ccc;
 }
-
