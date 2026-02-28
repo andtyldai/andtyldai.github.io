@@ -35,7 +35,7 @@ body {
   z-index: -1;
 }
 
-.about_me_header_section {
+.about_me {
   background: url(assets/images/about_me_background.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -47,7 +47,30 @@ body {
   position: relative;
   z-index: 1;
 }
-.about_me_header_section::after {
+.about_me::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: -1;
+}
+
+.contact_me {
+  background: url(assets/images/contact_me_background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 85%;
+  min-height: 100vh;
+  animation: fadeIn 0.5s forwards ease-in;
+  animation-delay: 0s;
+  transition: 0.6s;
+  position: relative;
+  z-index: 1;
+}
+.contact_me::after {
   position: absolute;
   content: "";
   top: 0;
@@ -64,16 +87,6 @@ body {
   }
   to {
     opacity: 1;
-  }
-}
-
-@keyframes fadeOut {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-    visibility: hidden;
   }
 }
 
@@ -178,7 +191,7 @@ nav a:hover {
   list-style: none;
 }
 .icons li {
-  margin: 15px 25px;
+  margin: 0.5vw 25px;
 }
 .icons li a {
   font-size: 30px;
@@ -188,7 +201,54 @@ nav a:hover {
   color: #ccc;
 }
 
-button {
+.contact_info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  position: relative;
+  top: 7vw;
+  margin-left: 7vw;
+}
+
+.contact_info h1 {
+  font-size: 50px;
+}
+
+.contact_info h2 {
+  font-size: 24px;
+  margin: 0.5vw 0;
+}
+
+.contact_info p {
+  margin: 0 0.5vw;
+}
+
+.contact_info form {
+  margin: 0 0.5vw;
+}
+
+.text_box {
+  color: #000;
+  text-shadow: 0px 0px 0px;
+}
+
+.send_button {
+  width: 60px;
+  height: 25px;
+  background-color: transparent;
+  cursor: pointer;
+  border: 2px solid #fff;
+  box-shadow: 0px 0px 0 #ccc;
+  transition: 0.3s !important;
+  overflow: hidden !important;
+}
+
+.send_button:hover {
+  box-shadow: 3px 3px 0 #ccc;
+}
+
+.introduction button {
   width: 180px;
   height: 50px;
   background-color: transparent;
@@ -198,24 +258,12 @@ button {
   border: 2px solid #fff;
   box-shadow: 0px 0px 0 #ccc;
   position: relative;
-  transition: 0.6s !important;
+  transition: 0.5s !important;
   overflow: hidden !important;
   font-size: 16px;
 }
-button::after {
-  position: absolute;
-  content: "";
-  top: -100%;
-  left: 0%;
-  background-color: #ccc;
-  height: 100%;
-  width: 100%;
-  transition: 0.5s;
-}
-button:hover::after {
-  top: 100%;
-}
-button:hover {
+
+.introduction button:hover {
   box-shadow: 5px 5px 0 #ccc;
 }
 
@@ -251,5 +299,8 @@ button:hover {
   }
   .icons {
     font-size: 20pt;
+  }
+  .contact_info h1 {
+    font-size: 24pt;
   }
 }
