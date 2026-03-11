@@ -17,6 +17,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 100%;
+  background-attachment: fixed;
   min-height: 100vh;
   animation: fadeIn 0.5s forwards ease-in;
   animation-delay: 0s;
@@ -40,6 +41,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50%;
+  background-attachment: fixed;
   min-height: 100vh;
   animation: fadeIn 0.5s forwards ease-in;
   animation-delay: 0s;
@@ -58,11 +60,38 @@ body {
   z-index: -1;
 }
 
+.projects {
+  background: url(assets/images/projects_background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-attachment: fixed;
+  min-height: 100vh;
+  animation: fadeIn 0.5s forwards ease-in;
+  animation-delay: 0s;
+  transition: 0.6s;
+  position: relative;
+  z-index: 1;
+  padding: 0 0 7vw 0;
+}
+
+.projects::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: -1;
+}
+
 .contact_me {
   background: url(assets/images/contact_me_background.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 85%;
+  background-attachment: fixed;
   min-height: 100vh;
   animation: fadeIn 0.5s forwards ease-in;
   animation-delay: 0s;
@@ -275,6 +304,49 @@ nav a:hover {
   font-size: 12px;
 }
 .photo_credit p:hover {
+  color: #ccc;
+}
+
+.top_portfolio {
+  margin: 7vw 7vw 0 7vw;
+  height: max-content;
+  backdrop-filter: blur(5px);
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+  padding: 0.25vw;
+}
+
+.portfolio {
+  margin: 50px 7vw 0 7vw;
+  height: max-content;
+  backdrop-filter: blur(5px);
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+  padding: 0.25vw;
+}
+
+.projects img {
+  float: left;
+  margin: 12px;
+}
+
+.projects h1 {
+  font-size: 28pt;
+}
+
+.projects h2 {
+  font-size: 14pt;
+}
+
+.projects p {
+  font-size: 18pt;
+}
+
+.link {
+  text-decoration-line: underline;
+}
+
+.link:hover {
   color: #ccc;
 }
 
